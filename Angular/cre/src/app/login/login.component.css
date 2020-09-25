@@ -1,0 +1,101 @@
+body {
+    font-family: 'Work Sans', sans-serif;
+    font-size: 32pt;
+    color: #090121;
+    background-image: url(../../../../links/background.svg);
+    background-size: cover;
+    display: flex-start;
+}
+
+.container {
+    border-radius: 1vw;
+    background-color: rgba(255, 255, 255, 0.85);
+    width: 92vw;
+    height: 156vw;
+    position: relative;
+    margin: auto;
+    z-index: 2;
+    top: 40vw;
+}
+
+.caixas {
+    position: relative;
+    margin-top: 32vw;
+}
+
+.utilizador, .palavra-passe {
+    position: relative;
+    border-radius: 1vw;
+    border: #090121 1px solid;
+    text-align: left;
+    height: 12vw;
+    padding: 4vw;
+    margin: 4vw;
+}
+
+input {
+    text-decoration: none;
+    background: none;
+    border: 0px;
+}
+
+::placeholder {
+    color: #090121;
+}
+
+input:focus {
+    outline: none;
+}
+
+.entrar {
+    position: relative;
+    border-radius: 1vw;
+    color: white;
+    background-color: #090121;
+    text-align: center;
+    height: 12vw;
+    padding: 5%;
+    margin: 4vw;
+    margin-top: 12vw;
+}
+
+.incorreta {
+    color: #EA5160;
+    text-align: center;
+}
+
+.recuperar {
+    text-align: center;
+}
+
+.recuperar a {
+    color: #004487;
+    text-decoration: none;
+}
+
+.recuperar a:hover {
+    text-decoration: underline;
+}
+
+
+
+header {
+    text-align: center;
+    font-size: 64pt;
+    font-weight: 600;
+    z-index: 4;
+    position: relative;
+    top: 28vw;
+}
+
+.together, .login {
+    color: #004487;
+}
+
+
+.login {
+    font-size: 48pt;
+    margin-top: 24vw;
+}
+
+

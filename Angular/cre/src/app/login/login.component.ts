@@ -23,17 +23,15 @@ export class LoginComponent implements OnInit {
   }
 
   doEntrar() {
-    if(this.login.username == this.login.password){
+    if(this.login.utilizador == this.login.palavraPasse){
       this.irParaFuncionarios();
       this.mensagem_erro = '';
       return;
     }
-    this.mensagem_erro = 'tente novamente';
+    this.mensagem_erro = 'Palavra-passe incorreta.<br>Tente novamente.';
   }
 
   irParaFuncionarios(){
-    this.router.navigate(['menu']);
+    this.router.navigate(['produtos']);
   }
 }
-
-

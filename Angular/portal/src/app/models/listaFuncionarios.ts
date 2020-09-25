@@ -1,4 +1,4 @@
-import { Login } from './models/login';
+import { Login } from './login';
 
 export const LOGIN: Login[] = [
     { username: "Ana", password: "Galego"},
