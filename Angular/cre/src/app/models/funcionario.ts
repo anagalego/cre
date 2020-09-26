@@ -6,5 +6,6 @@ export class Funcionario {
     id: number;
     departamento: Departamento;
     seccao: Seccao;
+    nome: String;
     login: Login;
 }

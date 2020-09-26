@@ -24,6 +24,7 @@ export class LoginComponent implements OnInit {
 
   doEntrar() {
     if(this.login.utilizador == this.login.palavraPasse){
+      localStorage.setItem('utilizador', this.login.utilizador);
       this.irParaFuncionarios();
       this.mensagem_erro = '';
       return;
@@ -32,6 +33,6 @@ export class LoginComponent implements OnInit {
   }
 
   irParaFuncionarios(){
-    this.router.navigate(['produtos']);
+    this.router.navigate(['menu']);
   }
 }

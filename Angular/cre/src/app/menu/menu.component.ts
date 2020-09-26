@@ -11,9 +11,19 @@ export class MenuComponent implements OnInit {
 
   funcionario: Funcionario = new Funcionario();
 
+  
+
   constructor() { }
 
-  ngOnInit(): void {
+  ngOnInit(){
+    this.funcionario.nome = localStorage.getItem('utilizador'); 
   }
 
+  criarDiario() {
+    console.log('Criar Diário');
+  }
+
+  consultarHistorico() {
+    console.log('Consultar Histórico');
+  }
 }
