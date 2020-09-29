@@ -1,0 +1,115 @@
+body {
+    all: unset;
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 400;
+    font-size: 16pt;
+    color: #090121;
+    background-image: url(../../links/background.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex-start;
+}
+
+header {
+    text-align: center;
+    font-weight: 600;
+    z-index: 4;
+    position: relative;
+    top: 28vw;
+}
+
+h1 {
+    font-size: 32px;
+    font-weight: 600;
+}
+
+h2 {
+    font-size: 24px;
+    font-weight: 600;
+    color:#004487;
+}
+
+h3 {
+    font-size: 20px;
+    font-weight: 400;
+    margin: 0;
+}
+
+.container {
+    border-radius: 1vw;
+    background-color: rgba(255, 255, 255, 0.85);
+    width: 92vw;
+    height: 156vw;
+    position: relative;
+    margin: 20vw auto auto;
+    z-index: 2;
+}
+
+.caixas {
+    position: relative;
+    margin-top: 32vw;
+}
+
+.caixa {
+    position: relative;
+    border-radius: 1vw;
+    border: #090121 1px solid;
+    padding: 4vw;
+    margin: 4vw;
+    margin-left: 12vw;
+    margin-right: 12vw;
+    height: 7vw;
+    font-size: 16px;
+}
+
+.erro {
+    font-size: 12pt;
+    color: #EA5160;
+    text-align: center;
+    margin: 4vw 12vw;
+}
+
+input, button {
+    text-decoration: none;
+    background: none;
+    border: 0px;
+    font-family: 'Work Sans', sans-serif;
+    font-size: 16px;
+    width: 68vw;
+}
+
+::placeholder {
+    color: #090121;
+    opacity: 0.5;
+    font-size: 16px;
+}
+
+input:focus {
+    outline: none;
+}
+
+button {
+    color: white;
+    height: 15vw;
+    outline: none;
+}
+
+#voltar {
+    position: relative;
+    z-index: 4;
+    top: 40vw;
+    left: 8vw;
+    width: 16vw; 
+    height: 16vw;
+    border-radius: 8vw;
+    background-image: url(../../links/voltar.svg);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: 10vw;
+    background-color: #090121;
+}
+
+
+
+
+

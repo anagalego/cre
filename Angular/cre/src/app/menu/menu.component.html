@@ -1,16 +1,13 @@
-
-
-
 <div class="container">  
     <header>
-      <h1 class="bem-vinda">Bem-vindo(a) <br>{{this.funcionario.nome}}</h1>
+      <h2 class="bem-vinda">Bem-vindo(a) <br>{{this.funcionario.nome}}</h2>
     </header>   
     <div class="caixas">
-      <button (click)="criarDiario()" class="diario">Criar Diário</button>
-      <button (click)="consultarHistorico()" class="historico">Consultar Histórico</button>
+      <button (click)="criarProduto()" class="caixa" class="diario">Criar Produto</button>
+      <button (click)="consultarHistorico()" class="caixa" class="historico">Consultar Histórico</button>
       <ul class="listaProdutos">
         <li class="produto1">
-          <span class="data">20/09</span><span class="encomenda">EN500</span><span class="produto">AVL Branco</span><span class="quantidade">230</span>
+          <span class="data">{{listaProdutos[0]}}</span><span class="encomenda">{{listaProdutos[0].pvp}}</span><span class="produto">{{listaProdutos[0].categoria}}</span><span class="quantidade">{{listaProdutos[0].cor}}</span>
         </li>
         <li class="produto2">
           <span class="data">20/09</span><span class="encomenda">EN500</span><span class="produto">AVL Branco</span><span class="quantidade">230</span>
@@ -19,6 +16,15 @@
           <span class="data">20/09</span><span class="encomenda">EN500</span><span class="produto">AVL Branco</span><span class="quantidade">230</span>
         </li>
         <li class="produto4">
+          <span class="data">20/09</span><span class="encomenda">EN500</span><span class="produto">AVL Branco</span><span class="quantidade">230</span>
+        </li>
+        <li class="produto5">
+          <span class="data">20/09</span><span class="encomenda">EN500</span><span class="produto">AVL Branco</span><span class="quantidade">230</span>
+        </li>
+        <li class="produto6">
+          <span class="data">20/09</span><span class="encomenda">EN500</span><span class="produto">AVL Branco</span><span class="quantidade">230</span>
+        </li>
+        <li class="produto7">
           <span class="data">20/09</span><span class="encomenda">EN500</span><span class="produto">AVL Branco</span><span class="quantidade">230</span>
         </li>       
       </ul>

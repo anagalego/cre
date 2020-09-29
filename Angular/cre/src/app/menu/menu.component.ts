@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { LoginComponent } from '../login/login.component';
+import { Router } from '@angular/router';
 import { Funcionario } from '../models/funcionario';
+import { Produto } from '../models/produto';
 
 @Component({
   selector: 'app-menu',
@@ -10,17 +11,17 @@ import { Funcionario } from '../models/funcionario';
 export class MenuComponent implements OnInit {
 
   funcionario: Funcionario = new Funcionario();
-
   
+  listaProdutos: Produto[] = Produto[100]; 
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit(){
     this.funcionario.nome = localStorage.getItem('utilizador'); 
   }
 
-  criarDiario() {
-    console.log('Criar Diário');
+  criarProduto() {
+    this.router.navigate(['criar-produto']);
   }
 
   consultarHistorico() {

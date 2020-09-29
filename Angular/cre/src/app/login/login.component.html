@@ -1,23 +1,19 @@
-<body>
 <div class="container">  
-    <header>
-      <h1 class="logo"><span class="v">V</span><span class="l">L</span></h1>
-      <h2 class="login">Login</h2>
-    </header>   
-    <div class="caixas">
-      <div class="utilizador">
-        <input placeholder="utilizador" type="text" [(ngModel)]="login.utilizador">
-      </div>
-      <div class="palavra-passe">
-        <input placeholder="palavra-passe" type="text" [(ngModel)]="login.palavraPasse">
-      </div>
-      <div class="incorreta">{{mensagem_erro}}</div>
-      <div class="entrar">
-        <button class="entrarTXT" (click)="doEntrar()">Entrar</button>
-      </div>
-      <div class="recuperar">
-        <a href="">Recuperar palavra-passe?</a>
-      </div>
-    </div>      
-  </div>
-</body>
+  <header>
+    <h1 class="logo"><span class="v">Viúva</span><span class="l">Lamego</span></h1>
+    <h2 class="login">Login</h2>
+  </header>   
+  <div class="caixas">
+    <div class="caixa utilizador">
+      <input placeholder="utilizador" type="text" [(ngModel)]="login.utilizador">
+    </div>
+    <div class="caixa palavra-passe">
+      <input placeholder="palavra-passe" type="text" [(ngModel)]="login.palavraPasse">
+    </div>
+    <div class="erro">{{mensagem_erro}}</div>
+    <button (click)="doEntrar()" class="entrar">Entrar</button>
+    <div class="recuperar">
+      <a (click)="recuperarPalavraPasse()">Recuperar palavra-passe?</a>
+    </div>
+  </div>      
+</div>

@@ -7,4 +7,14 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'cre';
+
+  voltar: HTMLElement;
+
+  mostrar() {
+    this.voltar = document.getElementById('voltar');
+    this.voltar.className = 'esconder';
+  }
+
+  voltarAtras(){
+  }
 }

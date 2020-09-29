@@ -1,0 +1,25 @@
+<div class="container">  
+    <header>
+      <h2>Produto {{this.produto.id}}</h2>
+    </header>   
+    <div class="caixas">
+      <div class="caixa" id="categoria">
+        <h3>{{this.produto.categoria}}</h3>
+      </div>
+      <div class="caixa" id="cor">
+        <h3>{{this.produto.cor}}</h3>
+      </div>
+      <div class="caixa" id="pvp">
+        <h3>{{this.produto.pvp}}</h3>
+      </div>
+      <div class="caixa" id="data">
+        <h3>Criado a {{this.produto.data}}</h3>
+      </div>
+      <button (click)="anularProduto()" class="anular">Anular Produto</button>
+      <button (click)="faturar()" class="faturar">Emitir Fatura</button>
+    </div>      
+  </div>
+
+
+
+

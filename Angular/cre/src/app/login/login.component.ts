@@ -29,10 +29,14 @@ export class LoginComponent implements OnInit {
       this.mensagem_erro = '';
       return;
     }
-    this.mensagem_erro = 'Palavra-passe incorreta.<br>Tente novamente.';
+    this.mensagem_erro = 'Palavra-passe incorreta. <br>Tente novamente.';
   }
 
   irParaFuncionarios(){
     this.router.navigate(['menu']);
+  }
+
+  recuperarPalavraPasse(){
+    console.log('Recuperar palavra-passe.');
   }
 }

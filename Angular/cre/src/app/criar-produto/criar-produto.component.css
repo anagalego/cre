@@ -1,12 +1,9 @@
-.l, .login {
+.criarProduto {
     color: #004487;
-}
-
-.login {
     margin-top: 12vw;
 }
 
-.utilizador, .palavra-passe {
+.caixa {
     position: relative;
     border-radius: 1vw;
     border: #090121 1px solid;
@@ -15,37 +12,25 @@
     margin: 4vw;
     margin-left: 12vw;
     margin-right: 12vw;
+    
 }
 
-.entrar {
+.criar {
     position: relative;
     border-radius: 1vw;
     background-color: #090121;
     text-align: center;
     padding: 4vw;
-    margin: 12vw;
-    margin-bottom: 4vw;
+    margin: 4vw 12vw;
 }
 
-.recuperar {
-    text-align: center;
+.nulo {
+    position: relative;
+    border-radius: 1vw;
+    border: #EA5160 1px solid;
+    text-align: left;
+    padding: 4vw;
+    margin: 4vw;
+    margin-left: 12vw;
+    margin-right: 12vw;
 }
-
-.recuperar a {
-
-    font-size: 12pt;
-    color: #004487;
-    text-decoration: none;
-}
-
-.recuperar a:hover {
-    text-decoration: underline;
-}
-
-#voltar {
-    display: none;
-}
-
-
-
-
