@@ -4,7 +4,7 @@ body {
     font-weight: 400;
     font-size: 16pt;
     color: #090121;
-    background-image: url(../../links/background.svg);
+    background-color: #f1f1f1;
     background-size: cover;
     background-repeat: no-repeat;
     display: flex-start;
@@ -41,7 +41,7 @@ h3 {
     width: 92vw;
     height: 156vw;
     position: relative;
-    margin: 20vw auto auto;
+    margin: 36vw auto auto;
     z-index: 2;
 }
 
@@ -94,20 +94,6 @@ button {
     outline: none;
 }
 
-#voltar {
-    position: relative;
-    z-index: 4;
-    top: 40vw;
-    left: 8vw;
-    width: 16vw; 
-    height: 16vw;
-    border-radius: 8vw;
-    background-image: url(../../links/voltar.svg);
-    background-repeat: no-repeat;
-    background-position: 50% 50%;
-    background-size: 10vw;
-    background-color: #090121;
-}
 
 
 

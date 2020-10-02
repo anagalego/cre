@@ -1,3 +1,5 @@
+import { HttpClientModule } from '@angular/common/http';
+
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
@@ -24,7 +26,8 @@ import { ProdutoAnuladoComponent } from './produto-anulado/produto-anulado.compo
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

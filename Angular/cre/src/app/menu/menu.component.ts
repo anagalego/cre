@@ -17,7 +17,7 @@ export class MenuComponent implements OnInit {
   constructor(private router: Router) { }
 
   ngOnInit(){
-    this.funcionario.nome = localStorage.getItem('utilizador'); 
+    this.funcionario.nome = localStorage.getItem('id'); 
   }
 
   criarProduto() {

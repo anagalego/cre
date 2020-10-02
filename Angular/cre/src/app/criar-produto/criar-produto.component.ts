@@ -35,15 +35,14 @@ export class CriarProdutoComponent implements OnInit {
       && this.produto.cor != null
       && this.produto.pvp != null){
         
+        this.produto.data = new Date().toLocaleString("yyyy/MM/dd");
+        localStorage.setItem('dataCriacao-produto', this.produto.data);
+        
         localStorage.setItem('id-produto', this.produto.id);
         localStorage.setItem('categoria-produto', this.produto.categoria);
         localStorage.setItem('cor-produto', this.produto.cor);
         localStorage.setItem('pvp-produto', this.produto.pvp);
-
-        this.produto.data = new Date().toLocaleString("yyyy/MM/dd");
-        localStorage.setItem('data-produto', this.produto.data);
-
-
+        
         this.router.navigate(['produto-criado']);
         return;
     } else {

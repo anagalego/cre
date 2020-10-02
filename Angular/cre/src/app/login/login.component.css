@@ -6,7 +6,7 @@
     margin-top: 12vw;
 }
 
-.utilizador, .palavra-passe {
+.id, .palavra-passe {
     position: relative;
     border-radius: 1vw;
     border: #090121 1px solid;
@@ -40,10 +40,6 @@
 
 .recuperar a:hover {
     text-decoration: underline;
-}
-
-#voltar {
-    display: none;
 }
 
 
