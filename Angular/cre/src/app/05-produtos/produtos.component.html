@@ -1,0 +1,50 @@
+<div class="container">
+    <div class="sub">
+      <h2>Produtos <br>de ana{{this.funcionario.nome}}</h2>
+    </div>
+    <div class="lista">
+        <ul> 
+            <li>
+                <h3 class="produto">AVL Branco</h3>
+                <span class="data">20/09/2020</span>
+                <div class="botoes">
+                    <div class="botao">
+                        <button (click)="eliminarProduto()" class="eliminar">Eliminar</button> 
+                    </div>
+                    <div class="botao">
+                        <button (click)="faturarProduto()" class="faturar">Faturar</button> 
+                    </div>
+                </div>
+            <!--<span class="data">{{listaProdutos[0]}}</span><span class="encomenda">{{listaProdutos[0].pvp}}</span><span class="produto">{{listaProdutos[0].categoria}}</span><span class="quantidade">{{listaProdutos[0].cor}}</span>-->
+            </li> 
+            <li>
+                <h3 class="produto">AVL Branco</h3>
+                <span class="data">20/09/2020</span>
+                <div class="botoes">
+                    <div class="botao">
+                        <button (click)="eliminarProduto()" class="eliminar">Eliminar</button> 
+                    </div>
+                    <div class="botao">
+                        <button (click)="faturarProduto()" class="faturar">Faturar</button> 
+                    </div>
+                </div>
+            <!--<span class="data">{{listaProdutos[0]}}</span><span class="encomenda">{{listaProdutos[0].pvp}}</span><span class="produto">{{listaProdutos[0].categoria}}</span><span class="quantidade">{{listaProdutos[0].cor}}</span>-->
+            </li>
+            <li class="faturado">
+                <h3 class="produto">AVL Branco</h3>
+                <span class="data">20/08/2020</span>
+                <h3 class="fatura">Fatura N.º3<span class="dataFatura"> 02/09/2020</span></h3>
+            <!--<span class="data">{{listaProdutos[0]}}</span><span class="encomenda">{{listaProdutos[0].pvp}}</span><span class="produto">{{listaProdutos[0].categoria}}</span><span class="quantidade">{{listaProdutos[0].cor}}</span>-->
+            </li> 
+            <li class="faturado">
+                <h3 class="produto">AVL Branco</h3>
+                <span class="data">20/08/2020</span>
+                <h3 class="fatura">Fatura N.º3<span class="dataFatura"> 02/09/2020</span></h3>
+            <!--<span class="data">{{listaProdutos[0]}}</span><span class="encomenda">{{listaProdutos[0].pvp}}</span><span class="produto">{{listaProdutos[0].categoria}}</span><span class="quantidade">{{listaProdutos[0].cor}}</span>-->
+            </li>  
+        </ul>
+    </div>
+    <div class="caixa">
+        <button (click)="criarProduto()">Criar Produto</button> 
+    </div>    
+</div>

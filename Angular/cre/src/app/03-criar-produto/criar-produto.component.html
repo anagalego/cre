@@ -1,0 +1,26 @@
+<div class="container">  
+  <div class="sub">
+    <h2 class="criarProduto">Criar Produto</h2>
+  </div>
+  <div class="caixa" id="id">
+    <input placeholder="id" type="text" [(ngModel)]="produto.id">
+  </div>
+  <div class="caixa" id="categoria">
+    <input placeholder="categoria" type="text" [(ngModel)]="produto.categoria">
+  </div>
+  <div class="caixa" id="cor">
+    <input placeholder="cor" type="text" [(ngModel)]="produto.cor">
+  </div>
+  <div class="caixa" id="pvp">
+    <input placeholder="pvp" type="number" [(ngModel)]="produto.pvp">
+  </div>
+  <div class="caixa mensagem erro">
+    {{mensagem_erro}}
+  </div>
+  <div class="caixa">
+    <button (click)="criarProduto()">Criar</button>
+  </div>    
+  <div class="caixa cancelar">
+    <button (click)="cancelar()">Cancelar</button>
+  </div>  
+</div>
