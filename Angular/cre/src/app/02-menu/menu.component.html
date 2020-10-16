@@ -1,0 +1,23 @@
+<div class="container">  
+    <div class="super">
+      <h1>Bem-vindo(a) <br>{{this.funcionario.nome}}{{this.nome}}</h1>
+    </div> 
+    <div class="caixa">
+      <button (click)="criarProduto()" class="caixa" class="diario">Criar Produto</button>
+    </div>
+    <div class="caixa">
+      <button (click)="consultarHistorico()" class="caixa" class="historico">Consultar Histórico</button>
+    </div>
+    <div class="lista">
+      <ul>
+        <li *ngFor="let produto of listaProdutos">
+          <span class="data">{{produto.data}}</span><span class="produto">{{produto.categoria}}</span><span class="cor">{{produto.cor}}</span><span class="funcionario">{{produto.funcionario}}</span>
+        </li>
+
+        <li>
+          <span class="data">09/09</span><span class="produto">AVL</span><span class="cor">Branco</span><span class="funcionario">ana</span>
+        </li>
+              
+      </ul>   
+    </div> 
+  </div>

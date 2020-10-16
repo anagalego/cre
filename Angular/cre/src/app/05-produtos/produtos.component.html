@@ -1,0 +1,29 @@
+<div class="container">
+    <div class="sub">
+      <h2>Produtos <br>de {{this.funcionario.nome}}</h2>
+    </div>
+    <div class="lista">
+        <ul> 
+            <li *ngFor="let produto of listaProdutos">
+                <h3 class="produto">{{produto.categoria}} {{produto.cor}}</h3>
+                <span class="data">{{produto.data}}</span>
+                <div class="botoes">
+                    <div class="botao">
+                        <button (click)="eliminarProduto()" class="eliminar">Eliminar</button> 
+                    </div>
+                    <div class="botao">
+                        <button (click)="faturarProduto()" class="faturar">Faturar</button> 
+                    </div>
+                </div>
+            </li> 
+            <li class="faturado" *ngFor="let produto of listaProdutos">
+                <h3 class="produto">{{produto.categoria}} {{produto.cor}}</h3>
+                <span class="data">{{produto.data}}</span>
+                <h3 class="fatura">{{produto.fatura}}<span class="dataFatura"> {{produto.datafatura}}</span></h3>
+            </li>  
+        </ul>
+    </div>
+    <div class="caixa">
+        <button (click)="criarProduto()">Criar Produto</button> 
+    </div>    
+</div>

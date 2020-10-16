@@ -1,0 +1,8 @@
+.eliminarProduto button {
+    background-color: #F2BBC4;
+    border: #EA5160 1px solid; 
+}
+
+.eliminarProduto button, h2 {
+    color: #EA5160;
+}

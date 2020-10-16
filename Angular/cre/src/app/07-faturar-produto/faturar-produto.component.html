@@ -1,0 +1,20 @@
+<div class="container">  
+    <div class="sub">
+      <h2 class="criarProduto">Faturar <br>Produto id</h2>
+    </div>
+    <div class="caixa" id="id">
+      <input placeholder="N.º" type="number" [(ngModel)]="this.fatura.id">
+    </div>
+    <div class="caixa" id="categoria">
+      <input placeholder="cliente" type="text" [(ngModel)]="this.fatura.cliente">
+    </div>
+    <div class="caixa mensagem erro">
+      {{mensagem_erro}}
+    </div>
+    <div class="caixa">
+      <button (click)="faturarProduto()">Faturar</button>
+    </div>    
+    <div class="caixa cancelar">
+      <button (click)="cancelar()">Cancelar</button>
+    </div>  
+  </div>

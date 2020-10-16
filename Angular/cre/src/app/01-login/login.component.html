@@ -1,0 +1,23 @@
+<div class="container">
+  <div class="super">
+    <h1><span class="v">Viúva</span><span class="l">Lamego</span></h1>
+  </div>
+  <div class="sub">
+    <h2>Login</h2>
+  </div>
+  <div class="caixa">
+    <input placeholder="id" type="text" [(ngModel)]="this.login.id">
+  </div>
+  <div class="caixa">
+    <input placeholder="palavra-passe" type="password" [(ngModel)]="this.login.palavraPasse">
+  </div>
+  <div class="caixa mensagem erro">
+    {{mensagem_erro}}
+  </div>
+  <div class="caixa">
+    <button (click)="doEntrar()">Entrar</button>
+  </div>
+  <div class="caixa mensagem">
+    <a (click)="recuperarPalavraPasse()">Recuperar palavra-passe?</a>
+  </div>   
+</div>

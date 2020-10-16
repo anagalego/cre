@@ -1,0 +1,78 @@
+.sub {
+    height: 10.5vh;
+    max-height: 105px;
+    min-height: 63px;
+}
+
+.lista, ul {
+    padding: 0;
+    height: 34vh;
+}
+
+.lista {
+
+    margin-top: 5.5vh;
+}
+
+li {
+    border: #C0D5FF 1px solid;
+    border-radius: 5px;
+
+    min-height: 96px;
+
+    display: block;
+    align-items: initial;
+    padding: 0.75em;
+    margin: 1.5vh 0;
+}
+
+li:first-child {
+    margin-top: 0;
+}
+
+li.faturado {
+    background-color: #E9F1FF;
+    color: #C0D5FF;
+    padding-bottom: 0.5em;
+}
+
+
+h3 {
+    text-align: left;
+    margin-bottom: -0.4em;
+    color: #090121;
+}
+
+.botoes {
+    position: relative;
+    display: grid;
+}
+
+.botao button {
+    font-size: 1em;
+    max-width: 135px;
+    height: 3vh;
+    margin: 0;
+    width: 47%;
+}
+
+.eliminar{
+    background-color: #FFF;
+    border: #EA5160 1px solid;
+    color: #EA5160;
+    left: 0.1em;
+    top: 0.1em;
+}
+
+.faturar {
+    right: 0.1em;
+    top: 0.1em;
+}
+
+.faturado.botoes {
+    display: none;
+}
+
+.dataFatura {
+    font-size: 0.68em;
+}
