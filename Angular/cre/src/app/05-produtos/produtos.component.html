@@ -1,5 +1,6 @@
 <div class="container">
     <div class="sub">
+<<<<<<< HEAD
       <h2>Produtos <br>de {{this.funcionario.nome}}</h2>
     </div>
     <div class="lista">
@@ -7,6 +8,15 @@
             <li *ngFor="let produto of listaProdutos">
                 <h3 class="produto">{{produto.categoria}} {{produto.cor}}</h3>
                 <span class="data">{{produto.data}}</span>
+=======
+      <h2>Produtos <br>de ana{{this.funcionario.nome}}</h2>
+    </div>
+    <div class="lista">
+        <ul> 
+            <li>
+                <h3 class="produto">AVL Branco</h3>
+                <span class="data">20/09/2020</span>
+>>>>>>> deaf0f56abcde25a8002527604ce5cb329fb053d
                 <div class="botoes">
                     <div class="botao">
                         <button (click)="eliminarProduto()" class="eliminar">Eliminar</button> 
@@ -15,11 +25,40 @@
                         <button (click)="faturarProduto()" class="faturar">Faturar</button> 
                     </div>
                 </div>
+<<<<<<< HEAD
             </li> 
             <li class="faturado" *ngFor="let produto of listaProdutos">
                 <h3 class="produto">{{produto.categoria}} {{produto.cor}}</h3>
                 <span class="data">{{produto.data}}</span>
                 <h3 class="fatura">{{produto.fatura}}<span class="dataFatura"> {{produto.datafatura}}</span></h3>
+=======
+            <!--<span class="data">{{listaProdutos[0]}}</span><span class="encomenda">{{listaProdutos[0].pvp}}</span><span class="produto">{{listaProdutos[0].categoria}}</span><span class="quantidade">{{listaProdutos[0].cor}}</span>-->
+            </li> 
+            <li>
+                <h3 class="produto">AVL Branco</h3>
+                <span class="data">20/09/2020</span>
+                <div class="botoes">
+                    <div class="botao">
+                        <button (click)="eliminarProduto()" class="eliminar">Eliminar</button> 
+                    </div>
+                    <div class="botao">
+                        <button (click)="faturarProduto()" class="faturar">Faturar</button> 
+                    </div>
+                </div>
+            <!--<span class="data">{{listaProdutos[0]}}</span><span class="encomenda">{{listaProdutos[0].pvp}}</span><span class="produto">{{listaProdutos[0].categoria}}</span><span class="quantidade">{{listaProdutos[0].cor}}</span>-->
+            </li>
+            <li class="faturado">
+                <h3 class="produto">AVL Branco</h3>
+                <span class="data">20/08/2020</span>
+                <h3 class="fatura">Fatura N.º3<span class="dataFatura"> 02/09/2020</span></h3>
+            <!--<span class="data">{{listaProdutos[0]}}</span><span class="encomenda">{{listaProdutos[0].pvp}}</span><span class="produto">{{listaProdutos[0].categoria}}</span><span class="quantidade">{{listaProdutos[0].cor}}</span>-->
+            </li> 
+            <li class="faturado">
+                <h3 class="produto">AVL Branco</h3>
+                <span class="data">20/08/2020</span>
+                <h3 class="fatura">Fatura N.º3<span class="dataFatura"> 02/09/2020</span></h3>
+            <!--<span class="data">{{listaProdutos[0]}}</span><span class="encomenda">{{listaProdutos[0].pvp}}</span><span class="produto">{{listaProdutos[0].categoria}}</span><span class="quantidade">{{listaProdutos[0].cor}}</span>-->
+>>>>>>> deaf0f56abcde25a8002527604ce5cb329fb053d
             </li>  
         </ul>
     </div>

@@ -1,9 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Funcionario } from '../models/funcionario';
+<<<<<<< HEAD
 import { ListaProdutosService } from '../servicos/lista-produtos.service';
 import { Produto } from '../models/produto';
 import { Login } from '../models/login';
+=======
+>>>>>>> deaf0f56abcde25a8002527604ce5cb329fb053d
 
 @Component({
   selector: 'app-produtos',
@@ -12,6 +15,7 @@ import { Login } from '../models/login';
 })
 export class ProdutosComponent implements OnInit {
 
+<<<<<<< HEAD
   funcionario: Funcionario;
 
   listaProdutos: Array<Produto>;
@@ -40,6 +44,14 @@ export class ProdutosComponent implements OnInit {
         document
       }
     })
+=======
+  funcionario: Funcionario = new Funcionario();
+
+  constructor(private router: Router) { }
+
+  ngOnInit() {
+    this.funcionario.nome = localStorage.getItem('id'); 
+>>>>>>> deaf0f56abcde25a8002527604ce5cb329fb053d
   }
 
   criarProduto() {

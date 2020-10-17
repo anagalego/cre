@@ -17,6 +17,7 @@ export class ProdutoFaturadoComponent implements OnInit {
     this.produto.id = localStorage.getItem('id-produto');
     this.produto.categoria = localStorage.getItem('categoria-produto');
     this.produto.cor = localStorage.getItem('cor-produto');
+<<<<<<< HEAD
     this.produto.pvp = JSON.parse(localStorage.getItem('pvp-produto'));
     this.produto.data = localStorage.getItem('data-produto');
   }
@@ -25,4 +26,10 @@ export class ProdutoFaturadoComponent implements OnInit {
     this.router.navigate(['menu']);
   }
 
+=======
+    this.produto.pvp = localStorage.getItem('pvp-produto');
+    this.produto.data = localStorage.getItem('data-produto');
+  }
+
+>>>>>>> deaf0f56abcde25a8002527604ce5cb329fb053d
 }

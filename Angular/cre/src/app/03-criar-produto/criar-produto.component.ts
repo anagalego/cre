@@ -81,9 +81,13 @@ export class CriarProdutoComponent implements OnInit {
     
   }
 
+<<<<<<< HEAD:Angular/cre/src/app/03-criar-produto/criar-produto.component.ts
 
 
   cancelar() {
+=======
+  cancelar(){
+>>>>>>> deaf0f56abcde25a8002527604ce5cb329fb053d:Angular/cre/src/app/03-criar-produto/criar-produto.component.ts
     this.router.navigate(['menu']);
   }
 

@@ -20,8 +20,11 @@ export class ProdutoCriadoComponent {
     this.produto.pvp = JSON.parse(localStorage.getItem('pvp-produto'));
     this.produto.data = localStorage.getItem('data-produto');
   }
+<<<<<<< HEAD:Angular/cre/src/app/04-produto-criado/produto-criado.component.ts
 
   ok() {
     this.router.navigate(['menu']);
   }
+=======
+>>>>>>> deaf0f56abcde25a8002527604ce5cb329fb053d:Angular/cre/src/app/04-produto-criado/produto-criado.component.ts
 }
