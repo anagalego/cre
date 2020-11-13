@@ -1,6 +1,6 @@
 <div class="container">
   <div class="super">
-    <h1><span class="v">Viúva</span><span class="l">Lamego</span></h1>
+    <h1>Produtos</h1>
   </div>
   <div class="sub">
     <h2>Login</h2>
@@ -9,17 +9,13 @@
     <input placeholder="id" type="text" [(ngModel)]="this.login.id">
   </div>
   <div class="caixa">
-<<<<<<< HEAD
     <input placeholder="palavra-passe" type="password" [(ngModel)]="this.login.palavraPasse">
-=======
-    <input placeholder="palavra-passe" type="text" [(ngModel)]="this.login.palavraPasse">
->>>>>>> deaf0f56abcde25a8002527604ce5cb329fb053d
   </div>
   <div class="caixa mensagem erro">
     {{mensagem_erro}}
   </div>
   <div class="caixa">
-    <button (click)="doEntrar()">Entrar</button>
+    <button (click)="entrar()">Entrar</button>
   </div>
   <div class="caixa mensagem">
     <a (click)="recuperarPalavraPasse()">Recuperar palavra-passe?</a>

@@ -1,5 +1,22 @@
 .sub {
-    height: 9vh;
-    max-height: 90px;
-    min-height: 54px;
+    height: 12.937vh;
+    max-height: 104px;
+}
+
+.lista {
+    height: 35.116vh;
+    z-index: 4;
+}
+
+.coluna1 {
+    width: 45%;
+}
+
+.coluna2 {
+    width: 55%;
+}
+
+
+.nome {
+    margin-top: -7pt;
 }

@@ -1,0 +1,30 @@
+<div class="container">  
+    <div class="sub">
+      <h2>Produtos da Equipa</h2>
+    </div> 
+    <div class="lista">
+      <ul>      
+        <li *ngFor="let produto of listaProdutos">
+          <div class="coluna1">
+            <span class="funcionario">{{produto.funcionario | slice:0:10}}</span>
+            <span class="data">{{produto.data | slice:0:5}}</span>
+          </div>
+          <div class="coluna2">
+            <div class="linha1">
+              <span class="produto">{{produto.id | slice:0:16}}</span>
+              <span class="quantidade">{{produto.quantidade}}</span>
+            </div>
+            <div>
+              <span class="descricao">{{produto.categoria | slice:0:11}} {{produto.cor | slice:0:11}}</span>
+            </div>
+          </div>          
+        </li>       
+      </ul>   
+    </div>
+    <div class="caixa">
+      <button (click)="novoProduto()">Novo Produto</button>
+    </div>
+    <div class="caixa">
+      <button (click)="consultarProdutosFuncionario()" class="consulta">Produtos de {{this.funcionario.nome}}</button>
+    </div>    
+  </div>

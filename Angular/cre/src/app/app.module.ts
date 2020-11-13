@@ -16,6 +16,18 @@ import { EliminarProdutoComponent } from './06-eliminar-produto/eliminar-produto
 import { FaturarProdutoComponent } from './07-faturar-produto/faturar-produto.component';
 import { ProdutoFaturadoComponent } from './08-produto-faturado/produto-faturado.component';
 import { ProdutoEliminadoComponent } from './09-produto-eliminado/produto-eliminado.component';
+import { AdminMenuComponent } from './10-admin-menu/admin-menu.component';
+import { AdminProdutosEquipaComponent } from './11-admin-produtos-equipa/admin-produtos-equipa.component';
+import { AdminCriarFuncionarioComponent } from './12-admin-criar-funcionario/admin-criar-funcionario.component';
+import { AdminFuncionarioCriadoComponent } from './13-admin-funcionario-criado/admin-funcionario-criado.component';
+import { AdminFuncionariosComponent } from './14-admin-funcionarios/admin-funcionarios.component';
+import { AdminCriarCategoriaComponent } from './15-admin-criar-categoria/admin-criar-categoria.component';
+import { AdminCategoriaCriadaComponent } from './16-admin-categoria-criada/admin-categoria-criada.component';
+import { AdminCategoriasComponent } from './17-admin-categorias/admin-categorias.component';
+import { AdminCriarCorComponent } from './18-admin-criar-cor/admin-criar-cor.component';
+import { AdminCorCriadaComponent } from './19-admin-cor-criada/admin-cor-criada.component';
+import { AdminCoresComponent } from './20-admin-cores/admin-cores.component';
+
 
 @NgModule({
   declarations: [
@@ -28,7 +40,18 @@ import { ProdutoEliminadoComponent } from './09-produto-eliminado/produto-elimin
     EliminarProdutoComponent,
     FaturarProdutoComponent,
     ProdutoFaturadoComponent,
-    ProdutoEliminadoComponent
+    ProdutoEliminadoComponent,
+    AdminMenuComponent,
+    AdminProdutosEquipaComponent,
+    AdminCriarFuncionarioComponent,
+    AdminFuncionarioCriadoComponent,
+    AdminFuncionariosComponent, 
+    AdminCriarCategoriaComponent,
+    AdminCategoriaCriadaComponent,
+    AdminCategoriasComponent,
+    AdminCriarCorComponent,
+    AdminCorCriadaComponent,
+    AdminCoresComponent
   ],
   imports: [
     BrowserModule,

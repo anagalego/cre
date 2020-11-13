@@ -1,0 +1,23 @@
+<div class="container">  
+    <div class="sub">
+      <h2>Nova Cor</h2>
+    </div>
+    <div class="caixa">
+      <input placeholder="id" type="text" [(ngModel)]="this.cor.id">
+    </div>
+    <div class="caixa">
+      <input placeholder="nome" type="text" [(ngModel)]="this.cor.nome">
+    </div>
+    <div class="caixa-cor">
+      <input placeholder="hex" type="color" [(ngModel)]="this.cor.hex">
+    </div>
+    <div class="caixa-mensagem-erro">
+      {{mensagem_erro}}
+    </div>
+    <div class="caixa">
+      <button (click)="criar()">Criar</button>
+    </div>    
+    <div class="caixa cancelar">
+      <button (click)="cancelar()" class="consulta">Cancelar</button>
+    </div>  
+  </div>

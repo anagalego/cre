@@ -1,0 +1,27 @@
+<div class="container">  
+    <div class="sub">
+      <h2>Cores</h2>
+    </div> 
+    <div class="lista">
+      <ul>
+        
+        
+        <li *ngFor="let cor of listaCores">
+          <div class="coluna1">
+            <span class="id">{{cor.id}}</span><br>
+            <span class="nome">{{cor.nome}}</span>
+          </div>
+          <div class="coluna2" style="background-color: #{{cor.hex}};">
+          </div>          
+        </li>
+
+        
+      </ul>   
+    </div>
+    <div class="caixa">
+      <button (click)="novaCor()" class="caixa">Nova Cor</button>
+    </div>
+    <div class="caixa">
+      <button (click)="cancelar()" class="consulta">Cancelar</button>
+    </div>    
+  </div>

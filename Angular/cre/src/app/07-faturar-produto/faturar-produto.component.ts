@@ -1,10 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { AppComponent } from '../app.component';
 import { Fatura } from '../models/fatura';
-<<<<<<< HEAD
-import { Produto } from '../models/produto';
-=======
->>>>>>> deaf0f56abcde25a8002527604ce5cb329fb053d
+import { FaturarProdutoService } from '../servicos/faturas/faturar-produto.service';
 
 @Component({
   selector: 'app-faturar-produto',
@@ -13,26 +11,18 @@ import { Produto } from '../models/produto';
 })
 export class FaturarProdutoComponent implements OnInit {
 
-<<<<<<< HEAD
-  produto: Produto = new Produto();
-
-=======
->>>>>>> deaf0f56abcde25a8002527604ce5cb329fb053d
+  appComponent: AppComponent;
   fatura: Fatura = new Fatura();
-
   mensagem_erro = '';
 
-  constructor(private router: Router) { }
+  constructor(private router: Router, private faturarProduto: FaturarProdutoService) { }
 
   ngOnInit(): void {
     this.mensagem_erro = '';
-<<<<<<< HEAD
-    localStorage.setItem('produto-faturado-id', this.produto.id);
-=======
->>>>>>> deaf0f56abcde25a8002527604ce5cb329fb053d
+    this.fatura.idProduto = sessionStorage.getItem('produto-id');
   }
 
-  faturarProduto(){
+  novaFatura(){
     this.router.navigate(['produto-faturado']);
   }
 

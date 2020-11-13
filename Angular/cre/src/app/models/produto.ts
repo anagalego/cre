@@ -18,14 +18,7 @@ export class Produto {
     @Input()
     id: string;
     @Input()
-    pvp: number;
-
+    quantidade: number;
     @Input()
     fatura: number;
-    @Input()
-    datafatura: string;
-    @Input()
-    cliente: string;
-    @Input()
-    faturado: boolean;
 }

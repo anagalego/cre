@@ -5,9 +5,15 @@
              version="2.2">
     <persistence-unit name="crePU" transaction-type="JTA">
         <jta-data-source>jdbc/ProdutosDS</jta-data-source>
+
+        <class>entidades.Entidade</class>
         <class>entidades.Funcionario</class>
         <class>entidades.Produto</class>
         <class>entidades.Fatura</class>
+        <class>entidades.Categoria</class>
+        <class>entidades.Cor</class>
+
+
 
     </persistence-unit>
 </persistence>

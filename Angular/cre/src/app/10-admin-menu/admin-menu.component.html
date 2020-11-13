@@ -1,0 +1,27 @@
+<div class="container">  
+    <div class="super">
+      <h1>{{mensagem_boasvindas}} <br>{{this.funcionario.nome}}</h1>
+    </div>
+
+    <div class="caixa-admin">
+        <button (click)="consultarFuncionarios()" class="consulta-menu">Funcionários</button>
+        <button (click)="novoFuncionario()" class="novo">Novo</button>
+    </div>
+    <div class="caixa-admin">
+        <button (click)="consultarCategorias()" class="consulta-menu">Categorias</button>
+        <button (click)="novaCategoria()" class="novo">Nova</button>
+    </div>
+    <div class="caixa-admin">
+        <button (click)="consultarCores()" class="consulta-menu">Cores</button>
+        <button (click)="novaCor()" class="novo">Nova</button>
+    </div>
+    <div class="caixa">
+        <button (click)="novoProduto()">Novo Produto</button>
+    </div>
+    <div class="caixa">
+      <button (click)="consultarProdutosFuncionario()" class="consulta">Produtos de {{this.funcionario.nome}}</button>
+    </div>         
+    <div class="caixa">
+      <button (click)="consultarProdutosEquipa()" class="consulta">Produtos da Equipa</button>
+    </div> 
+  </div>

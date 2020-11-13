@@ -6,3 +6,20 @@
 .eliminarProduto button, h2 {
     color: #EA5160;
 }
+
+.sub {
+    height: 12.937vh;
+    max-height: 104px;
+}
+
+.container{
+    width: 68vw;
+    max-width: 300px;
+}
+
+h3 {
+    font-size: 2vh;
+    line-height: 1.4;
+    margin-top: 1vh;
+    margin-bottom: 6vh;
+}

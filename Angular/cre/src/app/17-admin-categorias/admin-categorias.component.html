@@ -1,0 +1,34 @@
+<div class="container">  
+    <div class="sub">
+      <h2>Categorias</h2>
+    </div> 
+    <div class="lista">
+      <ul>
+        
+        
+        <li *ngFor="let categoria of listaCategorias">
+          <div class="coluna1">
+            <span class="id">{{categoria.id}}</span><br>
+            <span class="nome">{{categoria.nome | slice:0:12}}</span>
+          </div>
+          <div class="coluna2">
+            <div class="linha1">
+              <span class="produto">Dimensão</span>
+              <span class="quantidade">€ {{categoria.pvp}}</span>
+            </div>
+            <div>
+              <span class="descricao">{{categoria.x}} x {{categoria.y}} x {{categoria.z}} cm</span>
+            </div>
+          </div>          
+        </li>
+
+        
+      </ul>   
+    </div>
+    <div class="caixa">
+      <button (click)="novaCategoria()" class="caixa">Nova Categoria</button>
+    </div>
+    <div class="caixa">
+      <button (click)="cancelar()" class="consulta">Cancelar</button>
+    </div>    
+  </div>

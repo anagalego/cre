@@ -1,25 +1,15 @@
 <div class="container">  
     <div class="sub">
-      <h2 class="criarProduto">Faturar <br>Produto id</h2>
-    </div>
-    <div class="caixa" id="id">
-<<<<<<< HEAD
-      <input placeholder="N.º" type="number" [(ngModel)]="this.fatura.id">
+      <h2 class="criarProduto">Faturar <br>Produto {{this.fatura.idProduto}}</h2>
     </div>
     <div class="caixa" id="categoria">
       <input placeholder="cliente" type="text" [(ngModel)]="this.fatura.cliente">
-=======
-      <input placeholder="id" type="text" [(ngModel)]="this.fatura.cliente">
-    </div>
-    <div class="caixa" id="categoria">
-      <input placeholder="categoria" type="text" [(ngModel)]="this.fatura.nif">
->>>>>>> deaf0f56abcde25a8002527604ce5cb329fb053d
     </div>
     <div class="caixa mensagem erro">
       {{mensagem_erro}}
     </div>
     <div class="caixa">
-      <button (click)="faturarProduto()">Faturar</button>
+      <button (click)="novaFatura()">Faturar</button>
     </div>    
     <div class="caixa cancelar">
       <button (click)="cancelar()">Cancelar</button>

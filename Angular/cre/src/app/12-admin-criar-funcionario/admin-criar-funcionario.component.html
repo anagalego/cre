@@ -1,0 +1,36 @@
+<div class="container">  
+    <div class="sub">
+      <h2>Novo Funcionário</h2>
+    </div>
+    <div class="caixa">
+      <input placeholder="id" type="text" [(ngModel)]="this.funcionario.id">
+    </div>
+    <div class="caixa">
+      <input placeholder="palavra-passe" type="text" [(ngModel)]="this.funcionario.palavraPasse">
+    </div>
+    <div class="caixa-admin">
+      <!--<p-toggleButton onLabel="Sr." offLabel="Sr.ª" [(ngModel)]="checked"></p-toggleButton>-->
+
+      <button (click)="definirFeminino()" class="sra">Sr.ª</button>
+      <button (click)="definirMasculino()" class="sr">Sr.</button>
+      <button (click)="definirAdmin()" class="admin">Admin</button>
+    </div>
+    <div class="caixa">
+      <input placeholder="nome" type="text" [(ngModel)]="this.funcionario.nome">
+    </div>
+    <div class="caixa mensagem erro">
+      {{mensagem_erro}}
+    </div>
+    <div class="caixa">
+      <button (click)="criar()">Criar</button>
+    </div>    
+    <div class="caixa">
+      <button (click)="cancelar()" class="consulta">Cancelar</button>
+    </div>  
+  </div>
+
+
+  <!--
+    https://primefaces.org/primeng/showcase/#/togglebutton
+    https://www.citeforma.pt/formacao/formacao-continua/cursos/informatica/programador-net-vida-ativa-desempregados
+  -->

@@ -1,57 +1,30 @@
 <div class="container">  
     <div class="super">
-<<<<<<< HEAD
-      <h1>Bem-vindo(a) <br>{{this.funcionario.nome}}{{this.nome}}</h1>
-=======
-      <h1>Bem-vindo(a) <br>{{this.funcionario.nome}}</h1>
->>>>>>> deaf0f56abcde25a8002527604ce5cb329fb053d
+      <h1>{{mensagem_boasVindas}} <br>{{this.funcionario.nome}}</h1>
     </div> 
-    <div class="caixa">
-      <button (click)="criarProduto()" class="caixa" class="diario">Criar Produto</button>
-    </div>
-    <div class="caixa">
-      <button (click)="consultarHistorico()" class="caixa" class="historico">Consultar Histórico</button>
-    </div>
     <div class="lista">
-      <ul>
-<<<<<<< HEAD
+      <ul>      
         <li *ngFor="let produto of listaProdutos">
-          <span class="data">{{produto.data}}</span><span class="produto">{{produto.categoria}}</span><span class="cor">{{produto.cor}}</span><span class="funcionario">{{produto.funcionario}}</span>
-        </li>
-
-        <li>
-          <span class="data">09/09</span><span class="produto">AVL</span><span class="cor">Branco</span><span class="funcionario">ana</span>
-        </li>
-              
-=======
-        <li>
-          <span class="data">20/09<!--{{this.listaProdutos[0].data}}--></span><span class="produto">AVL<!--{{this.listaProdutos[0].produto}}--></span><span class="cor">Branco<!--{{this.listaProdutos[0].cor}}--></span><span class="funcionario">ana<!--{{this.listaProdutos[0].funcionario}}--></span>
-        </li>
-        <li>
-          <span class="data">20/09</span><span class="produto">AVL</span><span class="cor">Branco</span><span class="funcionario">ana</span>
-        </li>
-        <li>
-          <span class="data">20/09</span><span class="produto">AVL</span><span class="cor">Branco</span><span class="funcionario">ana</span>
-        </li>
-        <li>
-          <span class="data">20/09</span><span class="produto">AVL</span><span class="cor">Branco</span><span class="funcionario">ana</span>
-        </li>
-        <li>
-          <span class="data">20/09</span><span class="produto">AVL</span><span class="cor">Branco</span><span class="funcionario">ana</span>
-        </li>
-        <li>
-          <span class="data">20/09</span><span class="produto">AVL</span><span class="cor">Branco</span><span class="funcionario">ana</span>
-        </li>
-        <li>
-          <span class="data">20/09</span><span class="produto">AVL</span><span class="cor">Branco</span><span class="funcionario">ana</span>
-        </li>
-        <li>
-          <span class="data">20/09</span><span class="produto">AVL</span><span class="cor">Branco</span><span class="funcionario">ana</span>
-        </li>
-        <li>
-          <span class="data">20/09</span><span class="produto">AVL</span><span class="cor">Branco</span><span class="funcionario">ana</span>
-        </li>      
->>>>>>> deaf0f56abcde25a8002527604ce5cb329fb053d
+          <div class="coluna1">
+            <span class="funcionario">{{produto.funcionario | slice:0:10}}</span>
+            <span class="data">{{produto.data | slice:0:5}}</span>
+          </div>
+          <div class="coluna2">
+            <div class="linha1">
+              <span class="produto">{{produto.id | slice:0:16}}</span>
+              <span class="quantidade">{{produto.quantidade}}</span>
+            </div>
+            <div>
+              <span class="descricao">{{produto.categoria | slice:0:11}} {{produto.cor | slice:0:11}}</span>
+            </div>
+          </div>          
+        </li>       
       </ul>   
-    </div> 
+    </div>
+    <div class="caixa">
+      <button (click)="novoProduto()">Novo Produto</button>
+    </div>
+    <div class="caixa">
+      <button (click)="consultarProdutosFuncionario()" class="consulta">Produtos de {{this.funcionario.nome}}</button>
+    </div>    
   </div>

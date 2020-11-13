@@ -1,0 +1,24 @@
+<div class="container">  
+    <div class="sub">
+      <h2>Funcionários</h2>
+    </div> 
+    <div class="lista">
+      <ul>       
+        <li *ngFor="let funcionario of listaFuncionarios">
+            <div class="coluna1">
+                <span class="id">{{funcionario.id}}</span><br>
+                <span class="nome">{{funcionario.nome}}</span>
+            </div> 
+            <div class="coluna2">
+                <span class="id">{{funcionario.admin}}</span><br>
+            </div>         
+        </li>       
+      </ul>   
+    </div>
+    <div class="caixa">
+      <button (click)="novoFuncionario()" class="caixa">Novo Funcionário</button>
+    </div>
+    <div class="caixa">
+      <button (click)="cancelar()">Cancelar</button>
+    </div>    
+  </div>

@@ -57,6 +57,8 @@ input, textarea, select {
   box-sizing: border-box;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
+  margin: 0;
+    padding: 0;
 }
 
 /***************************
@@ -74,124 +76,93 @@ body {
     font-family: 'Work Sans', sans-serif;
     font-size: 12pt;
     color: #090121;
-    background-color: #f1f1f1;
-}
+    background-color: #F0F0F7;
 
-.container, .super, .sub, .caixa, .lista, .box {
-    justify-content: center;
-    flex-wrap: wrap;
-}
-
-.container, input, button, .box {
-    border-radius: 5px;
-} 
-
-.container, .box {
-    background-color: rgba(255, 255, 255, 0.85);
+    background-image: url("../../../../GH_GitHub_CRE_SQL-21.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .container {
+    border-radius: 5px;
     width: 92vw;
     max-width: 780px;
-
-    height: 64vh;
+    height: 74vh;
     max-height: 600px;
     min-height: 360px;
-
-    margin: 23vh auto auto;
-    padding: auto;
+    margin: 18.679vh auto auto;
+    padding: 0;
     position: relative;
-
     display: block;
     align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    background-color: rgba(255, 255, 255, 0);
 }
 
 
-.super, .caixa, .lista, li {
+.caixa {
+    justify-content: center;
+    flex-wrap: wrap;
     display: flex;
     align-items: center;
+    height: 5.545vh;
+    max-height: 45px;
+    min-height: 27px;
+    margin: 1.848vh 0;
 }
 
 .super {    /*background-color: rgba(150,150,150, 0.5);*/   
-    height: 20vh;
-    max-height: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    height: 20.33vh;
+    max-height: 300px;
     min-height: 108px;
+    
 }
 
-.sub,.caixa, input, button {
-    height: 5.5vh;
-    max-height: 45px;
-    min-height: 27px;
-    margin: 1.5vh 0;
-}
 
 .sub {    /*background-color: rgba(150,150,150, 0.5);*/ 
+    justify-content: center;
+    flex-wrap: wrap;
     display: flex;
     align-items: flex-end;
-}
-
-h1, h2, h3, button, .mensagem {
-    text-align: center;
-}
-
-h1, h2 {
-    font-weight: 600;
+    height: 5.545vh;
+    max-height: 45px;
+    min-height: 27px;
+    margin: 1.848vh 0;
 }
 
 h1 {
-    padding-top: 0.5em;
+    font-weight: 600;
+    text-align: center;
     font-size: 32px;
 }
 
 h2 {
+    font-weight: 600;
+    text-align: center;
     font-size: 24px;
 }
 
 h3 {
+    text-align: center;
     font-size: 18px;
     font-weight: 400;
 }
 
-input, button, .mensagem a {    
+.mensagem {
+    text-align: center;
+    align-items: flex-start;
+}
+
+.mensagem a {    
     font-family: 'Work Sans', sans-serif;
+    font-weight: 500;
     font-size: 12pt;
     text-decoration: none;
-}
-
-input, button, ul {
-    width: 68vw;
-    max-width: 300px;
-}
-
-input, button {
-    border: #090121 1px solid;
-    background: none;
-
-    padding: 0px;
-    position: absolute;
-}
-
-button {
-    color: #ffffff;
-    background-color: #090121;
-}
-
-input {
-    padding-left: 0.75em;
-}
-
-
-input:focus, button {
-    outline: none;
-}
-
-::placeholder {
-    color: #090121;
-    opacity: 0.5;
-}
-
-.mensagem {
-    align-items: flex-start;
 }
 
 .erro {
@@ -206,52 +177,134 @@ a:hover {
     text-decoration: underline;
 }
 
-.lista, ul {
-    padding: 1.5vh;
-    height: 20vh;
+button {
+    border-radius: 5px;
+    width: 68vw;
+    max-width: 300px;
+    border: #090121 1px solid;
+    background: none;
+    padding: 0px;
+    position: absolute;
+    height: 5.545vh;
+    max-height: 45px;
+    min-height: 27px;
+    margin: 1.848vh 0;
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 500;
+    font-size: 12pt;
+    text-decoration: none;
+    text-align: center;
+    color: #ffffff;
+    background-color: #090121;
+    outline: none;
+}
+
+input {
+    border-radius: 5px;
+    width: 68vw;
+    max-width: 300px;
+    border: #090121 1px solid;
+    background: none;
+    padding: 0px;
+    position: absolute;
+    height: 5.545vh;
+    max-height: 45px;
+    min-height: 27px;
+    margin: 1.848vh 0;
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 500;
+    font-size: 12pt;
+    text-decoration: none;
+    background-color: #FFFFFF;
+    padding-left: 0.75em;
+}
+
+input:focus {
+    outline: none;
+}
+
+
+
+.lista {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    height: 27.723vh;
+    margin: 1.848vh 0;
 }
 
 ul {
+    width: 68vw;
+    max-width: 300px;
+    height: 100%;
     overflow: scroll;
 }
 
 li {
-    border-bottom: #C0D5FF 1px solid;
+    border-radius: 5px;
+    width: 68vw;
+    max-width: 300px;
+    border: #C0D5FF 1px solid;
+    display: flex;
     justify-content: space-between;
     font-size: 0.75em;
     line-height: 2.25em;
     padding: 0 0.75em;
+    height: 5.545vh;
+    max-height: 45px;
+    min-height: 27px;
+    margin: 0.924vh 0;
+    background-color: #FFFFFF;
 }
 
-li:last-child {
-    border-bottom: 0px;
+li:first-child {
+    margin-top: 0;
 }
 
-.cancelar button {
-    background-color: #E9F1FF;
-    border: #C0D5FF 1px solid;
-    color: #090121;
+.coluna1 {
+    width: 35%;
+    display: block;
 }
 
-.container.alternativo {
-    background-color: rgba(255, 255, 255, 0);
-    width: 68vw;
-    max-width: 300px;
+.coluna2 {
+    width: 65%;
+    display: block;
 }
 
-.sub.alternativo {
-    height: 10.5vh;
-    max-height: 105px;
-    min-height: 63px;
+.funcionario, .data, .descricao, .nome {
+    display: block;
+}
+
+.linha1 {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.produto {
+    margin-right: auto;
+}
+
+.data, .descricao, .nome {
+    margin-top: -7pt;
+}
+
+.funcionario, .data, .nome {
+    color: #004487;
 }
 
 .box { 
-    height: 22.5vh;
+    justify-content: center;
+    flex-wrap: wrap;
+    border-radius: 5px;
+    height: 27.723vh;
     max-height: 225px;
     min-height: 135px;
-
-    margin-top: 5.5vh;
-    padding: 1.5vw;
+    margin-top: 9.4vh;
+    padding: 8vw;
+    background-color: rgba(255, 255, 255, 0.75);
+    align-items: center;
+    display: block;
 }
 
 .imagem {
@@ -260,6 +313,32 @@ li:last-child {
     background-repeat: no-repeat;
     background-position: center;
 }
+
+.imagem svg {
+    outline: #EA5160;
+}
+
+.consulta {
+    background-color: #F0F0F7;
+    color: #090121;
+    border: none;
+}
+
+.caixa-admin {
+    flex-wrap: wrap;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 5.545vh;
+    max-height: 45px;
+    min-height: 27px;
+    width: 68vw;
+    max-width: 300px;
+    margin: 1.848vh auto;
+    position: relative;    
+}
+
+
 
 
 

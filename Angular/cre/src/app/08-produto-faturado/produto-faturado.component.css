@@ -1,7 +1,33 @@
-.box {
-    padding-top: 5.5vh;
+.sub {
+    height: 12.937vh;
+    max-height: 104px;
+}
+
+.container{
+    width: 68vw;
+    max-width: 300px;
 }
 
 h3 {
-    padding-top: 2.5vh;
+    font-size: 2vh;
+    line-height: 1.4;
+    margin-top: 1vh;
+    margin-bottom: 6vh;
+    padding-top: 3.547vh;
+}
+
+.box {
+    padding-top: 6vh;
+}
+
+.container{
+    width: 68vw;
+    max-width: 300px;
+}
+
+h3 {
+    font-size: 2vh;
+    line-height: 1.4;
+    margin-top: 1vh;
+    margin-bottom: 6vh;
 }

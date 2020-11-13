@@ -1,0 +1,15 @@
+.consulta-menu {
+    color: #0B0B2D;
+    background-color: #F0F0F7;
+    border: 0;
+    width: 60%;
+    margin-right: 4vw;
+}
+
+.novo {
+    color: #6D6D9B;
+    background-color: #FFFFFF;
+    border: 0;
+    width: 35%;
+    right: 0;
+}

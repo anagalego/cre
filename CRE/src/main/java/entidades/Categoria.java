@@ -7,74 +7,49 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name = "Categoria")
-public class Categoria {
+public class Categoria extends Entidade {
 
     @Id
     @Column(name = "id")
     private String id;
-    @Column(name = "categoria")
-    private String categoria;
+    @Column(name = "nome")
+    private String nome;
     @Column(name = "x")
     private float x;
     @Column(name = "y")
     private float y;
     @Column(name = "z")
     private float z;
-    @Column(name = "area")
-    private float area;
+    @Column(name = "pvp")
+    private float pvp;
 
-    public Categoria(){};
-    public Categoria(String id, String categoria, float x, float y, float z) {
+    public Categoria() {}
+
+    public Categoria(String id, String nome, float x, float y, float z, float pvp) {
         this.id = id;
-        this.categoria = categoria;
+        this.nome = nome;
         this.x = x;
         this.y = y;
         this.z = z;
-        this.area = x*y;
+        this.pvp = pvp;
     }
 
-    public String getId() {
-        return id;
-    }
+    public String getId() { return id; }
+    public void setId(String id) { this.id = id; }
 
-    public void setId(String id) {
-        this.id = id;
-    }
+    public String getNome() { return nome; }
+    public void setNome(String nome) { this.nome = nome; }
 
-    public String getCategoria() {
-        return categoria;
-    }
+    public float getX() { return x; }
+    public void setX(float x) { this.x = x; }
 
-    public void setCategoria(String categoria) {
-        this.categoria = categoria;
-    }
+    public float getY() { return y; }
+    public void setY(float y) { this.y = y; }
 
-    public float getX() {
-        return x;
-    }
+    public float getZ() { return z; }
+    public void setZ(float z) { this.z = z; }
 
-    public void setX(float x) {
-        this.x = x;
-    }
+    public float getPvp() { return pvp; }
+    public void setPvp(float pvp) { this.pvp = pvp; }
 
-    public float getY() {
-        return y;
-    }
-
-    public void setY(float y) {
-        this.y = y;
-    }
-
-    public float getZ() {
-        return z;
-    }
-
-    public void setZ(float z) {
-        this.z = z;
-    }
-
-    public float getArea() {
-        return area;
-    }
 }
-

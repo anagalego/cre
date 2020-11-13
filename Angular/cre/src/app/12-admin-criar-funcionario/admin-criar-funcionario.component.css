@@ -1,0 +1,33 @@
+.sub {
+    height: 12.937vh;
+    max-height: 104px;
+}
+
+.sra {
+    color: #0B0B2D;
+    background-color: #F0F0F7;
+    border: 0;
+    width: 12vw; 
+}
+
+.sr {
+    color: #0B0B2D;
+    background-color: #F0F0F7;
+    border: 0;
+    width: 12vw;
+    margin: 0 4vw 0 16vw;
+}
+
+.admin {
+    color: #6D6D9B;
+    background-color: #FFFFFF;
+    border: 0;
+    width: 35%;
+    right: 0;
+}
+
+
+.selecionado {
+    color: #6D6D9B;
+    background-color: #FFFFFF;
+}

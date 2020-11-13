@@ -1,8 +1,7 @@
 package dao;
 
-import entidades.Categoria;
-import entidades.Funcionario;
 import entidades.Produto;
+import models.CriarProduto;
 
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
@@ -11,8 +10,16 @@ import java.util.List;
 
 @Stateless
 public class ProdutoDAO {
+
+
     @PersistenceContext(unitName = "crePU")
     EntityManager em;
+
+    public List<Produto> obterProdutosEquipa() {
+        return em.createQuery("select p from Produto p", Produto.class)
+                .getResultList();
+    }
+
 
     public List<Produto> obterProdutosPorFuncionario(String funcionario) {
         return em.createQuery("select p from Produto p where p.funcionario = :funcionario", Produto.class)
@@ -20,25 +27,66 @@ public class ProdutoDAO {
                 .getResultList();
     }
 
-    public List<Produto> obterProdutosEquipa() {
-        return em.createQuery("select p from Produto p", Produto.class)
-                .getResultList();
+    public Produto obterProduto(String id) { return em.find(Produto.class, id); }
+
+    public Produto criarProduto(CriarProduto criarProduto) {
+        Produto p = new Produto();
+        p.setId(criarProduto.getId());
+        p.setCategoria(criarProduto.getCategoria());
+        p.setCor(criarProduto.getCor());
+        p.setData(criarProduto.getData());
+        p.setFuncionario(criarProduto.getFuncionario());
+        p.setQuantidade(criarProduto.getQuantidade());
+        em.persist(p);
+        em.flush();
+        return p;
     }
 
-    public List<Produto> obterProdutosPorId(String id) {
-        return em.createQuery("select p from Produto p where p.id = :id", Produto.class)
-                .setParameter("id", id)
-                .getResultList();
+
+    public void faturarProduto(String id, int fatura) {
+        Produto p = obterProduto(id);
+        p.setFatura(fatura);
+        em.persist(p);
+        em.flush();
     }
 
-    public void criarProduto(String id, String categoria, String cor, String funcionario, String data, float pvp) {
-        int executeUpdate = em.createNativeQuery("insert into produto(id, categoria, cor, funcionario, data, pvp) values('" + id + "', '" + categoria + "', '" + cor + "', '" + funcionario + "', '" + data + "'," + pvp + ")")
-                .executeUpdate();
+    public void eliminarProduto(String id){
+        Produto p = em.find(Produto.class, id);
+        em.remove(p);
     }
 
-    public void faturarProduto(String id, int fatura, String datafatura, String cliente) {
-        int executeUpdate = em.createNativeQuery("insert into produto(fatura, datafatura, cliente, faturado) values(" + fatura + ", '" + datafatura + "', '," + cliente + "'," + true + ") where id =" + id)
-                .executeUpdate();
-    }
+
+
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

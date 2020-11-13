@@ -1,0 +1,25 @@
+.sub {
+    height: 12.937vh;
+    max-height: 104px;
+}
+
+.lista {
+    height: 35.116vh;
+}
+
+.coluna1 {
+    width: 60%;
+}
+
+.coluna2 {
+    width: 40%;
+}
+
+
+.nome {
+ margin-top: -7pt;
+}
+
+li {
+    padding-right: 0;
+}

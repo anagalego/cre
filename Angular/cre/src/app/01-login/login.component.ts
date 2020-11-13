@@ -1,8 +1,8 @@
-import { ThrowStmt } from '@angular/compiler';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { AppComponent } from '../app.component';
 import { Login } from '../models/login';
-import { AutenticacaoService } from '../servicos/autenticacao.service';
+import { AutenticacaoService } from '../servicos/autenticacao/login.service';
 
 @Component({
   selector: 'app-login',
@@ -13,9 +13,14 @@ import { AutenticacaoService } from '../servicos/autenticacao.service';
 
 export class LoginComponent implements OnInit {
 
+
+  appComponent: AppComponent;
+
   login: Login = new Login();
 
-  mensagem_erro = '';
+  mensagem_erro: string;
+
+  
 
   constructor(private router: Router, private autenticaServico: AutenticacaoService) { }
 
@@ -23,24 +28,44 @@ export class LoginComponent implements OnInit {
     this.mensagem_erro = '';
   }
 
-  doEntrar() {
+  entrar() {
     this.autenticaServico.autentica(this.login).subscribe(resultado => {
 
       if(resultado.sucesso == false) {
-        this.mensagem_erro = 'Palavra-passe incorreta. </br>Tente novamente.';
+        this.mensagem_erro = 'Tente novamente.';
       } else {
+        sessionStorage.setItem('nome', resultado.conteudo.nome);
+        sessionStorage.setItem('id', resultado.conteudo.id);
         
-        localStorage.setItem('id', resultado.conteudo.nome);
-        localStorage.setItem('login-id', resultado.conteudo.id);
-        this.irParaFuncionarios();
+        this.irParaMenu();
+        this.darBoasVindas();
+        
         this.mensagem_erro = '';
-        return;
       }
-    });    
+    }); 
+    return;   
   }
 
-  irParaFuncionarios(){
-    this.router.navigate(['menu']);
+  irParaMenu() {
+    this.autenticaServico.autentica(this.login).subscribe(resultado => {
+      if(resultado.conteudo.admin == true) {
+        this.router.navigate(['admin-menu']);
+      } else {
+        this.router.navigate(['menu']);
+      }   
+    });
+    return;
+  }
+
+  darBoasVindas() {
+    this.autenticaServico.autentica(this.login).subscribe(resultado => {
+      if(resultado.conteudo.feminino == true) {
+        sessionStorage.setItem('boas-vindas', 'Bem-vinda');
+      } else {
+        sessionStorage.setItem('boas-vindas', 'Bem-vindo');
+      }    
+    });
+    return;
   }
 
   recuperarPalavraPasse(){

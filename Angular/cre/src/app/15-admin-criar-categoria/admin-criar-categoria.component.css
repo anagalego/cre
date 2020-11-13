@@ -1,0 +1,18 @@
+.sub {
+    height: 12.937vh;
+    max-height: 104px;
+}
+
+.x {
+    width: 20vw; 
+}
+
+.y {
+    width: 20vw;
+    margin: 0 24vw;
+}
+
+.z {
+    width: 20vw;
+    right: 0;
+}

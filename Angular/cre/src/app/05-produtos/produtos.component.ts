@@ -1,12 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Funcionario } from '../models/funcionario';
-<<<<<<< HEAD
-import { ListaProdutosService } from '../servicos/lista-produtos.service';
+import { ListaProdutosService } from '../servicos/produtos/produtos-funcionario.service';
 import { Produto } from '../models/produto';
-import { Login } from '../models/login';
-=======
->>>>>>> deaf0f56abcde25a8002527604ce5cb329fb053d
+import { AppComponent } from '../app.component';
 
 @Component({
   selector: 'app-produtos',
@@ -15,47 +12,20 @@ import { Login } from '../models/login';
 })
 export class ProdutosComponent implements OnInit {
 
-<<<<<<< HEAD
-  funcionario: Funcionario;
+  appComponent: AppComponent;
+  funcionario: Funcionario = new Funcionario();
+  listaProdutos: Produto[];
 
-  listaProdutos: Array<Produto>;
-
-  constructor(private router: Router, private listaProdutosService: ListaProdutosService) {
-    this.listaProdutos = new Array<Produto>();
-    this.funcionario = new Funcionario();
-  }
+  constructor(private router: Router, private listaProdutosService: ListaProdutosService) { }
 
   ngOnInit() {
-    this.funcionario.nome = localStorage.getItem('id');
-    this.funcionario.id = localStorage.getItem('login-id');
+    this.funcionario.id = sessionStorage.getItem('id');
+    this.funcionario.nome = sessionStorage.getItem('nome');
 
     this.listaProdutosService.listarProdutos(this.funcionario).subscribe(produtos => {
-      console.log(produtos);
       this.listaProdutos = produtos;
-    });
+    });  
 
-    
-
-  }
-
-  apresentarProdutosFaturados() {
-    this.listaProdutos.forEach(produto => {
-      if(produto.faturado){
-        document
-      }
-    })
-=======
-  funcionario: Funcionario = new Funcionario();
-
-  constructor(private router: Router) { }
-
-  ngOnInit() {
-    this.funcionario.nome = localStorage.getItem('id'); 
->>>>>>> deaf0f56abcde25a8002527604ce5cb329fb053d
-  }
-
-  criarProduto() {
-    this.router.navigate(['criar-produto']);
   }
 
   eliminarProduto() {
@@ -64,6 +34,14 @@ export class ProdutosComponent implements OnInit {
 
   faturarProduto() {
     this.router.navigate(['faturar-produto']);
+  }
+
+  novoProduto() {
+    this.router.navigate(['criar-produto']);
+  }
+
+  ok() {
+    this.router.navigate(['menu']);
   }
 
 }

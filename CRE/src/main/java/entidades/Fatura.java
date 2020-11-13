@@ -1,61 +1,38 @@
 package entidades;
 
-import javax.persistence.*;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
 import javax.xml.bind.annotation.XmlRootElement;
 
 @Entity
 @Table(name = "Fatura")
-@XmlRootElement
-public class Fatura {
+public class Fatura extends Entidade {
 
     @Id
     @Column(name = "id")
     private int id;
-    @Column(name = "produto")
-    private int produto;
-    @Column(name = "funcionario")
-    private int funcionario;
     @Column(name = "cliente")
     private int cliente;
+    @Column(name = "data")
+    private String data;
 
-    public Fatura(){}
 
-    public Fatura(int id, int produto, int funcionario, int cliente){
+    public Fatura() {}
+
+    public Fatura(int id, int cliente, String data) {
         this.id = id;
-        this.produto = produto;
-        this.funcionario = funcionario;
         this.cliente = cliente;
+        this.data = data;
     }
 
-    public int getId() {
-        return id;
-    }
+    public void setId(int id) { this.id = id; }
+    public int getId() { return id; }
 
-    public void setId(int id) {
-        this.id = id;
-    }
+    public void setCliente(int cliente) { this.cliente = cliente; }
+    public int getCliente() { return cliente; }
 
-    public int getProduto() {
-        return produto;
-    }
-
-    public void setProduto(int produto) {
-        this.produto = produto;
-    }
-
-    public int getFuncionario() {
-        return funcionario;
-    }
-
-    public void setFuncionario(int funcionario) {
-        this.funcionario = funcionario;
-    }
-
-    public int getCliente() {
-        return cliente;
-    }
-
-    public void setCliente(int cliente) {
-        this.cliente = cliente;
-    }
+    public void setData(String data) { this.data = data; }
+    public String getData() { return data; }
 }

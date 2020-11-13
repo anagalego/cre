@@ -1,26 +1,56 @@
 <div class="container">  
   <div class="sub">
-    <h2 class="criarProduto">Criar Produto</h2>
+    <h2>Novo Produto</h2>
   </div>
-  <div class="caixa" id="id">
-    <input placeholder="id" type="text" [(ngModel)]="produto.id">
+  <div class="caixa">
+    <input placeholder="id" type="text" [(ngModel)]="this.produto.id">
   </div>
-  <div class="caixa" id="categoria">
-    <input placeholder="categoria" type="text" [(ngModel)]="produto.categoria">
+  <div class="caixa">
+    <input placeholder="categoria" type="text" class="categoria" (click)="toggleLista()" [(ngModel)]="this.produto.categoria">
   </div>
-  <div class="caixa" id="cor">
-    <input placeholder="cor" type="text" [(ngModel)]="produto.cor">
+  <div *ngIf=display class="lista">
+    <ul>
+      <li *ngFor="let categoria of listaCategorias">
+        <div class="coluna1">
+          <span class="id">{{categoria?.id?}}</span><br>
+          <span class="nome">{{categoria?.nome? | slice:0:12}}</span>
+        </div>
+        <div class="coluna2">
+          <div class="linha1">
+            <span class="produto">Dimensão</span>
+            <span class="quantidade">€ {{categoria?.pvp}}</span>
+          </div>
+          <div>
+            <span class="descricao">{{categoria?.x}} x {{categoria?.y}} x {{categoria?.z}} cm</span>
+          </div>
+        </div>          
+      </li>   
+    </ul>   
   </div>
-  <div class="caixa" id="pvp">
-    <input placeholder="pvp" type="number" [(ngModel)]="produto.pvp">
+  
+  <div class="caixa">
+    <input placeholder="cor" type="text" class="cor" [(ngModel)]="this.produto.cor">
+  </div>
+
+  <li *ngFor="let cor of listaCores">
+    <div class="coluna1">
+      <span class="id">{{cor?.id}}</span><br>
+      <span class="nome">{{cor?.nome}}</span>
+    </div>
+    <div class="coluna2" style="background-color: #{{cor?.hex}};">
+    </div>          
+  </li>
+  
+  <div class="caixa">
+    <input placeholder="quantidade" type="number" class="quantidade" [(ngModel)]="this.produto.quantidade">
   </div>
   <div class="caixa mensagem erro">
     {{mensagem_erro}}
   </div>
   <div class="caixa">
-    <button (click)="criarProduto()">Criar</button>
+    <button (click)="criar()">Criar</button>
   </div>    
-  <div class="caixa cancelar">
-    <button (click)="cancelar()">Cancelar</button>
+  <div class="caixa">
+    <button (click)="cancelar()" class="consulta">Cancelar</button>
   </div>  
 </div>
